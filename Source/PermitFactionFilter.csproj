@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>PermitFactionFilter</AssemblyName>
+    <RootNamespace>PermitFactionFilter</RootNamespace>
+    <Nullable>disable</Nullable>
+    <LangVersion>10</LangVersion>
+    <!-- Outputs straight into the mod Assemblies folder so you never need to copy manually -->
+    <OutputPath>..\1.6\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <!-- ── Adjust these two paths for your machine ──────────────────────────── -->
+  <PropertyGroup>
+    <!-- RimWorld install folder -->
+    <RimWorldPath Condition="'$(RimWorldPath)'==''">C:\Program Files (x86)\Steam\steamapps\common\RimWorld</RimWorldPath>
+    <!-- Steam workshop content folder — Harmony workshop ID: 2009463077 -->
+    <RimWorldModPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100</RimWorldModPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- RimWorld core assemblies -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldPath)\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(RimWorldPath)\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(RimWorldModPath)\2009463077\1.6\Assemblies\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>dibolic.PermitFactionFilter</packageId>
+  <name>Permit Faction Filter</name>
+  <author>Dibolic</author>
+  <description>In the Royalty permits tab, the "switch faction" menu only lists factions that actually offer permits (at least one RoyalTitlePermitDef), instead of every visible faction. No Defs are changed and saves are untouched: it is a single Harmony transpiler on PermitsCardUtility.DrawRecordsCard.</description>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+  </loadAfter>
+</ModMetaData>
