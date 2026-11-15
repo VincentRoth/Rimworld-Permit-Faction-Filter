@@ -20,6 +20,7 @@ A Harmony transpiler on `RimWorld.PermitsCardUtility.DrawRecordsCard` replaces t
 ## Building from source
 
 - **1.6**: `Source/PermitFactionFilter.csproj` (`net472`) → `1.6/Assemblies/`
+- **1.7**: `Source/1.7/PermitFactionFilter.csproj` (`net10.0`, references `Assembly-CSharp`, `UnityStubs` and Harmony 1.7 at the game root) → `1.7/Assemblies/`. The source file is shared between both projects, each must be built against the matching installed RimWorld.
 
 1. Open it in Visual Studio or Rider (or `dotnet build -c Release`).
 2. Edit `<RimWorldPath>` and `<RimWorldModPath>` at the top of the `.csproj` if your paths differ.

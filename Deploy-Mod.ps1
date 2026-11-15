@@ -27,7 +27,7 @@ $ErrorActionPreference = 'Stop'
 $source = $PSScriptRoot
 
 # The mod is useless without its DLLs: stop if a version listed in LoadFolders.xml has none.
-$missing = foreach ($v in '1.6') {
+$missing = foreach ($v in '1.6', '1.7') {
     if (-not (Test-Path (Join-Path $source "$v\Assemblies\PermitFactionFilter.dll"))) { $v }
 }
 if ($missing) {

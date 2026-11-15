@@ -6,6 +6,7 @@
   <description>In the Royalty permits tab, the "switch faction" menu only lists factions that actually offer permits (at least one RoyalTitlePermitDef), instead of every visible faction. No Defs are changed and saves are untouched: it is a single Harmony transpiler on PermitsCardUtility.DrawRecordsCard.</description>
   <supportedVersions>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <modDependencies>
     <li>
